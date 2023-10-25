@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="netflix1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="images/netflix-logo.png" alt="">
+
+    </div>
+    <div class="sign-in">
+        <div class="form">
+            <form id="submit-form" action="">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Email address</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="form-group ">
+                  <label for="exampleFormControlSelect1">Name</label>
+                  <input type="text" class="form-control" id="exampleFormControlSelect1" placeholder="First Name">
+                   
+                </div>
+               
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <br>
+                <input type="submit" value="submit">
+
+              </form>
+
+        <script>
+            $("#submit-form").submit((e)=>{
+                e.preventDefault()
+                $.ajax({
+                    url:"https://script.google.com/macros/s/AKfycbwNmfyjN4ZcEyVFCwdZIB5m5JXy9l3wMZQY5spPFW6IY2JGilrBP1tq1-4aIrFG6KiM/exec",
+                    data:$("#submit-form").serialize(),
+                    method:"post",
+                    success:function (response){
+                        alert("Form submitted successfully")
+                        window.location.reload()
+                        //window.location.href="https://google.com"
+                    },
+                    error:function (err){
+                        alert("Something Error")
+        
+                    }
+                })
+            })
+        </script>
+</body>
+</html>

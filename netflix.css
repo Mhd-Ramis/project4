@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+.main{
+    background-image: url(images/netflix-background.jpg);
+    height: 900px;
+    width: 100%;
+    border-bottom: 10px solid grey;
+    margin: auto;
+    width: 100%;
+
+    
+    text-align: center;
+
+}
+.header img{
+   
+}
+.row{
+    display:inline-flex ;
+}
+.nav{
+    height: 100px;
+    align-content: center;
+    justify-content: center;
+
+} 
+.logo-img{
+    height: 100px;
+    
+    display: inline-block;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+} 
+.logo{
+    width: fit-content;
+    height: 222%;
+    
+
+}
+
+.para{
+    margin-top:10px;
+    width: 100%;
+    display: inline;
+    margin-left: auto;
+    text-align: center;
+    
+}
+
+
+    
+
+.para h1{
+    font-size: 330%;
+    font-weight: bold;
+    margin-top: 174px;
+    
+
+}
+
+.para p{
+    line-height: 49px;
+    font-size: 134%;
+}
+.para input{
+    
+    width: 34%;
+    height: 61px;
+    background: transparent;
+    border-radius: 5px;
+    padding: 11px;
+    font-weight: 600;
+
+    
+}
+.para button{
+
+    padding: 14px;
+    background: red;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+    border-radius: 6px;
+}
+.features{
+    font-size: 22px;
+    padding: 50px 12%; 
+    background: black;
+    color: white;
+    border-bottom: 10px solid grey;
+}
+.content-one{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.image{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.image img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+    background: black;
+    color: white;
+    border-bottom: 10px solid grey;
+}
+.faq h1{
+    font-weight: bold;
+    font-size: 40px;
+}
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: inherit;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background:#303030 ;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label + .content::after{
+    transform: rotate(135deg);
+
+}
+.faq input{
+    width: 34%;
+    height: 61px;
+    background: transparent;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 11px;
+    font-weight: 600;
+    color: white;
+    
+}
+.faq button{
+    padding: 14px;
+    background: red;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+    border-radius: 6px;
+    margin-top:10px;
+}
+.faq small{
+    font-size: 13px;
+}
+footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+    background: black;
+}
+footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+footer .col a{
+    display: block;
+    text-decoration: none;
+    color:#777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.row-one{
+    display: flex;
+}
+.faq .email-signup{
+    padding-bottom: 26px;
+}
+.copyright-txt{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+@media screen and (max-width:600px){
+    .logo{
+        margin-left: -20px;
+        width: 150px;
+    }
+    .main{
+        height: 1050px;
+    }
+    .main,input{
+        font-size: 12px;
+        padding: 10px 15px;
+        color: white;
+    }
+    .dropdown{
+        margin-left: 45%;
+    width: 73%;
+    margin-top: 23px;
+    }
+    .btn-secondary{
+        margin-left: -85%;
+    }
+    .para p{
+        font-size: 25px;
+    }
+    .content-one h1{
+        font-size: 60px;
+
+    }
+    .text, .image{
+        flex-basis: 100%;
+
+    }
+    .text p{
+        font-size: 30px;
+
+    }
+    .accordion {
+        margin-left: -15px;
+    }
+    .accordion .content {
+        font-size: 30px;
+    }
+    .accordion label h1{
+        font-size: 23px;
+    }
+    .faq small{
+        font-size: 18px;
+    }
+    footer .col a{
+        font-size: 20px;
+        margin-left:-15px;
+        padding: 2px;
+
+    }
+    .row-one :nth-child(2),:nth-child(3){
+       
+    }
+
+}
